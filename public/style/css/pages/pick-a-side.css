@@ -1,0 +1,42 @@
+#pick-a-side {
+
+}
+
+#pick-a-side p {
+  padding: 15px 40px;
+  line-height: 1.5em;
+  font-size: 20px;
+}
+
+#pick-a-side p:first-letter {
+  font-size: 2em;
+
+}
+
+#pick-a-side a {
+  padding: 10px 30px;
+  color: black;
+  text-decoration: none;
+  line-height: 1.5em;
+  font-size: 18px;
+}
+
+#pick-a-side .button {
+  display: inline-block;
+  padding: 7px;
+  width: 110px;
+  border: 1px solid #cfcfcf;
+  margin-top: 20px;
+}
+
+
+#pick-a-side a#left { text-align: right; } 
+#pick-a-side a#right { text-align; left; }
+
+#pick-a-side a:hover {
+}
+
+#pick-a-side a:hover .button {
+  background: #eaeaea;
+
+}

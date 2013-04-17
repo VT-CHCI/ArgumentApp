@@ -1,0 +1,44 @@
+#article-selection {
+
+}
+
+#article-selection .article {
+  display: inline-block;
+  /* background: url('../../images/article.png'); */
+  background: #ffffff;
+  background-position: 0 0;
+  width: 90px;
+  padding: 20px;
+  padding-top: 4px;
+  height: 150px;
+  font-size: 24px;
+  border: 1px solid #cfcfcf;
+  font-weight: bold;
+  line-height: 2em;
+
+}
+
+#article-selection .article .description {
+  font-size: 18px;
+  line-height: 1em;
+  font-weight: normal;
+
+}
+
+#article-selection #bar {
+  background: black;
+
+  border-bottom: 1px solid #cfcfcf;
+}
+
+#article-selection .side {
+  display: inline-block;
+  border: 1px slid #cfcfcf
+  width: 48%;
+  height: 200px;
+  text-align: center;
+}
+
+#viewport {
+  boder:1px solid #cfcfcf;
+}

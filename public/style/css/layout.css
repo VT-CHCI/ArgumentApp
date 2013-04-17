@@ -1,0 +1,31 @@
+body {
+  background: url('../images/bg.png');
+
+  max-width: 960px;
+  margin: 0 auto;
+  line-height: 1.25em;
+  font-family: Bonveno;
+  font-weight: normal;
+  padding: 10px;
+}
+
+hr {
+  display: block;
+
+  height: 1px;
+  background: #cfcfcf;
+  border: none;
+  margin: 20px 0;
+}
+
+.vr {
+  display: table-cell;
+  width: 1px;
+  height: 100%; 
+  background: #cfcfcf;
+}
+
+.inline { 
+  padding: 10px 0;
+}
+.inline a { display: table-cell; }

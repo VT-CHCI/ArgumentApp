@@ -1,0 +1,24 @@
+!!!
+%html
+  %head
+    = partial :head
+  %body#pick-a-side
+    %h1 Pick A Side
+    %hr
+    %p
+      = description
+
+    %hr
+
+    .inline
+      %a#left{ :href => "#" }
+        = side_a
+        %br
+        %span.button Pick This Side
+      .vr
+      %a#right{ :href => "#" }
+        = side_b
+        %br
+        %span.button Pick This Side
+
+    %hr
