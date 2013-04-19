@@ -19,4 +19,4 @@ Dir["./models/*.rb"].each {|model| require model }
 DataMapper.auto_upgrade!
 
 require './routes/pick-a-side.rb'
-require './routes/article-selection.rb'
+require './routes/categorize.rb'

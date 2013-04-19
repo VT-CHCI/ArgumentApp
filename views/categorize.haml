@@ -1,0 +1,41 @@
+!!!
+%html
+  %head
+    = partial :head
+  %body#categorize
+    %h1 Categorize the Articles
+    %hr
+    #sort
+      #sidebar
+        .category
+          .counter 1
+          %h2 For My Side
+          %%span.description The inudstiralists that we've studied are captrains of inudstry and thei contributions to American society far outweigh the negatives 
+          %div.sortable-set
+            %div.sortable 
+              %img{:src => "style/images/article.png"}
+              %span.big Article One
+
+        .category
+          .counter 3
+          %h2 Against My Side
+          %%span.description The inudstrialists that we've studied are robber barrons," who exploited workers and cheated the system to become exorbinatly wealthy.
+
+          %div.sortable-set
+            %div.sortable 
+              %img{:src => "style/images/article.png"}
+              %span.big Article One
+            %div.sortable 
+              %img{:src => "style/images/article.png"}
+              %span.big Article One
+
+            %div.sortable 
+              %img{:src => "style/images/article.png"}
+              %span.big Article One
+
+      #content
+        %div.sortable-set
+          %div.sortable
+            %img{:src => "style/images/article.png"}
+            %span.big Article One
+            This is some additional Metadata pulled from the PDF provided.
