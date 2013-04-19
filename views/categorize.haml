@@ -12,48 +12,34 @@
         .category
           .counter 1
           %h2 For My Side
-          %%span.description The inudstiralists that we've studied are captrains of inudstry and thei contributions to American society far outweigh the negatives 
+          %span.description 
+            = side_a['description']
           %div.sortable-set{:ondragover => "dragover_handler(event)", :ondrop => "drop_handler(event)"}
-            %div.sortable{:draggable => "true", :ondragstart => "dragstart_handler(event)"}
-              %img{:src => "style/images/article.png"}
-              %span.big Article One
+            - side_a['articles'].each do |article|
+              %div.sortable{:draggable => "true", :ondragstart => "dragstart_handler(event)"}
+                %img{:src => "style/images/article.png"}
+                %span.big 
+                  = article['title']
+                = article['description']
 
         .category
-          .counter 3
+          .counter 
           %h2 Against My Side
-          %span.description The inudstrialists that we've studied are robber barrons," who exploited workers and cheated the system to become exorbinatly wealthy.
-
-          %div.sortable-set{:ondragover => "dragover_handler(event)", :ondrop => "drop_handler(event)"}
-            %div.sortable{:draggable => "true", :ondragstart => "dragstart_handler(event)"}
-              %img{:src => "style/images/article.png"}
-              %span.big Article One
-            %div.sortable{:draggable => "true", :ondragstart => "dragstart_handler(event)"}
-              %img{:src => "style/images/article.png"}
-              %span.big Article One
-
-            %div.sortable{:draggable => "true", :ondragstart => "dragstart_handler(event)"}
-              %img{:src => "style/images/article.png"}
-              %span.big Article One
+          %span.description 
+            = side_b['description']
+            %div.sortable-set{:ondragover => "dragover_handler(event)", :ondrop => "drop_handler(event)"}
+              - side_b['articles'].each do |article|
+                %div.sortable{:draggable => "true", :ondragstart => "dragstart_handler(event)"}
+                  %img{:src => "style/images/article.png"}
+                  %span.big 
+                    = article['title']
+                  = article['description']
 
       #content
         %div.sortable-set{:ondragover => "dragover_handler(event)", :ondrop => "drop_handler(event)"}
-          %div.sortable{:draggable => "true", :ondragstart => "dragstart_handler(event)"}
-            %img{:src => "style/images/article.png"}
-            %span.big Article One
-            This is some additional Metadata pulled from the PDF provided.
-          %div.sortable{:draggable => "true", :ondragstart => "dragstart_handler(event)"}
-            %img{:src => "style/images/article.png"}
-            %span.big Article One
-            This is some additional Metadata pulled from the PDF provided.
-          %div.sortable{:draggable => "true", :ondragstart => "dragstart_handler(event)"}
-            %img{:src => "style/images/article.png"}
-            %span.big Article One
-            This is some additional Metadata pulled from the PDF provided.
-          %div.sortable{:draggable => "true", :ondragstart => "dragstart_handler(event)"}
-            %img{:src => "style/images/article.png"}
-            %span.big Article One
-            This is some additional Metadata pulled from the PDF provided.
-          %div.sortable{:draggable => "true", :ondragstart => "dragstart_handler(event)"}
-            %img{:src => "style/images/article.png"}
-            %span.big Article One
-            This is some additional Metadata pulled from the PDF provided.
+          - unsorted.each do |article|
+            %div.sortable{:draggable => "true", :ondragstart => "dragstart_handler(event)"}
+              %img{:src => "style/images/article.png"}
+              %span.big 
+                = article['title']
+              = article['description']

@@ -1,4 +1,35 @@
 title: Industrialists of the Guilded Age
 description: Some feel that the powerful industrialists of the gilded age should be referred to as "robber barrons." This view accentuates the negative. It portrays men like Vanderbilt, Rockefeller, Carnegie and Ford as cruel and ruthless businessmen who would stop at nothing to achieve great wealth. These "robber barrons" were accused of exploting workers and creating horrible work conditions and unfair labor pracirces upon the worker. Another view of undstiralist is that of "captain of industry."
-side_a: The industrialists that we've studied are captains of industry," and their contributions to American society far outweigh the negatives.
-side_b: The industrialists that we've studied are robber barons," who exploited workers and cheated the system to become exorbinatly wealthy.
+
+
+side_b: 
+  description: The industrialists that we've studied are robber barons," who exploited workers and cheated the system to become exorbinatly wealthy.
+  articles:
+    - title: Article One
+      description: Testing test one
+
+    - title: Article Two
+      description: Testing Testing Two
+
+
+side_a:
+  description: The industrialists that we've studied are captains of industry," and their contributions to American society far outweigh the negatives.
+
+  articles:
+    - title: Article One
+      description: Testing test one
+
+    - title: Article Two
+      description: Testing Testing Two
+
+unsorted:
+  - title: Some Article
+    description: Some great meta description for the article
+  - title: Some Article
+    description: Some great meta description for the article
+  - title: Some Article
+    description: Some great meta description for the article
+  - title: Some Article
+    description: Some great meta description for the article
+  - title: Some Article
+    description: Some great meta description for the article

@@ -1,3 +1,4 @@
 get '/categorize' do
-  haml :categorize
+  locals = get_scenario
+  haml :categorize, :locals => locals
 end
