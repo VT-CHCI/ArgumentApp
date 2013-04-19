@@ -23,13 +23,22 @@ side_a:
       description: Testing Testing Two
 
 unsorted:
+  - title: Lorem Ipsum Dolor
+    description: Some great meta description for the article
+    file: somefile 
+
+  - title: Sit Amet
+    description: Some great meta description for the article
+    file: somefile
+
   - title: Some Article
     description: Some great meta description for the article
+    file: somefile
+
   - title: Some Article
     description: Some great meta description for the article
+    file: somefile
+
   - title: Some Article
     description: Some great meta description for the article
-  - title: Some Article
-    description: Some great meta description for the article
-  - title: Some Article
-    description: Some great meta description for the article
+    file: somefile
