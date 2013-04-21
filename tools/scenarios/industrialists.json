@@ -1,30 +1,35 @@
 {
-    "title": "Industrialists of the Guilded Age",
-    "description": "Some feel that the powerful industrialists of the gilded age should be referred to as \"robber barrons.\" This view accentuates the negative. It portrays men like Vanderbilt, Rockefeller, Carnegie and Ford as cruel and ruthless businessmen who would stop at nothing to achieve great wealth. These \"robber barrons\" were accused of exploting workers and creating horrible work conditions and unfair labor pracirces upon the worker. Another view of undstiralist is that of \"captain of industry.\"",
-    "side_a": {
-        "description": "The industrialists that we've studied are robber barons,\" who exploited workers and cheated the system to become exorbinatly wealthy.",
-        "articles": [
-            {
-                "title": "Lorem Ipsum Dolor",
-                "description": "Testing test one"
-            },
-            {
-                "title": "Sit Amet Alor",
-                "description": "Testing Testing Two"
-            }
-        ]
-    },
-    "side_b": {
-        "description": "The industrialists that we've studied are captains of industry,\" and their contributions to American society far outweigh the negatives.",
-        "articles": [
-            {
-                "title": "Side B Articule Uno",
-                "description": "Testing testing test one two"
-            },
-            {
-                "title": "Side B Article Numero Dos",
-                "description": "Testing testing woho two one two"
-            }
-        ]
-    }
+  "title": "Industrialists of the Guilded Age",
+  "description": "Some feel that the powerful industrialists of the gilded age should be referred to as \"robber barrons.\" This view accentuates the negative. It portrays men like Vanderbilt, Rockefeller, Carnegie and Ford as cruel and ruthless businessmen who would stop at nothing to achieve great wealth. These \"robber barrons\" were accused of exploting workers and creating horrible work conditions and unfair labor pracirces upon the worker. Another view of undstiralist is that of \"captain of industry.\"",
+  "side_a": {
+    "description": "The industrialists that we've studied are robber barons,\" who exploited workers and cheated the system to become exorbinatly wealthy.",
+    "articles": [
+      {
+        "file" : "/some/path",
+        "title": "Lorem Ipsum Dolor",
+        "description": "Testing test one"
+      },
+      {
+
+        "file" : "/some/path",
+        "title": "Sit Amet Alor",
+        "description": "Testing Testing Two"
+      }
+    ]
+  },
+  "side_b": {
+    "description": "The industrialists that we've studied are captains of industry,\" and their contributions to American society far outweigh the negatives.",
+    "articles": [
+      {
+        "file" : "/some/path",
+        "title": "Side B Articule Uno",
+        "description": "Testing testing test one two"
+      },
+      {
+        "file" : "/some/path",
+        "title": "Side B Article Numero Dos",
+        "description": "Testing testing woho two one two"
+      }
+    ]
+  }
 }
