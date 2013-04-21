@@ -17,7 +17,8 @@ put '/scenario/:uid' do
      scenario.articles << Article.create(
        :file        => article['file'],
        :title       => article['title'],
-       :description => article['description']
+       :description => article['description'],
+       :side        => article['side']
      )
   end
 

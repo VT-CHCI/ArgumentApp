@@ -1,14 +1,3 @@
-class Stack
-  include DataMapper::Resource
-
-  property :id, Serial
-  property :description, Text
-
-  has n, :articles, :through => Resource
-  belongs_to :scenario, :required => false
-
-end
-
 class Scenario
   include DataMapper::Resource
 
@@ -18,15 +7,8 @@ class Scenario
   property :title, String
   property :description, Text
 
-  has n, :stacks
-end
+  property :side_a, Text
+  property :side_b, Text
 
-class Article
-  include DataMapper::Resource
-  property :id, Serial
-  property :file, String
-  property :title, String
-  property :description, String
-
-  belongs_to :stack, :required => false
+  has n, :articles
 end
