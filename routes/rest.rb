@@ -5,28 +5,21 @@ end
 put '/scenario/:uid' do
   scn = JSON request.body.read
 
-  side_a = Stack.create(:description => scn['side_a']['description'])
-  side_b = Stack.create(:description => scn['side_b']['description']) 
+  scenario = Scenario.create(
+    :title        => scn['title'],
+    :description  => scn['description'],
+    :side_a       => scn['side_a'],
+    :side_b       => scn['side_b'],
+    :uid          => params[:uid]
+  )
 
-  ['side_a', 'side_b'].each do |side|
-   scn[side]['articles'].each do |article|
-     (side == 'side_a' ? side_a.articles : side_b.articles) << Article.create(
+  scn['articles'].each do |article|
+     scenario.articles << Article.create(
        :file        => article['file'],
        :title       => article['title'],
        :description => article['description']
      )
-    end
   end
-
-  scenario = Scenario.create(
-    :title        => scn['title'],
-    :description  => scn['description'],
-    :uid          => params[:uid]
-  )
-
-  scenario.stacks << side_a
-  scenario.stacks << side_b
-
 
   scenario.save
   status 200 
@@ -39,7 +32,7 @@ get '/scenario/:uid' do
     status 404
   else
     status 200
-    body scenario.to_json(:methods => [:stacks, :articles])
+    body scenario.to_json(:methods => [:articles])
   end
 end
 
