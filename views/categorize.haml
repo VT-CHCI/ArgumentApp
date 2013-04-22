@@ -15,30 +15,30 @@
           .counter 1
           %h2 For My Side
           %span.description 
-            = side_a['description']
+            = side_a
           %div.sortable-set{:ondragover => "dragover_handler(event)", :ondrop => "drop_handler(event)"}
-            - side_a['articles'].each do |article|
+            - articles.each do |article|
               %img{:src => "style/images/article.png"}
         %hr
         .category
           .counter 
           %h2 Against My Side
           %span.description 
-            = side_b['description']
+            = side_b
             %div.sortable-set{:ondragover => "dragover_handler(event)", :ondrop => "drop_handler(event)"}
-              - side_b['articles'].each do |article|
+              - articles.each do |article|
                 %img{:src => "style/images/article.png"}
 
       #content
         %h2 Uncategorized
         %p Please classify each article as either supporting your side or opposing your side.
         %div.sortable-set{:ondragover => "dragover_handler(event)", :ondrop => "drop_handler(event)"}
-          - unsorted.each do |article|
+          - articles.each_with_index do |article, i|
             %div.sortable{:draggable => "true", :ondragstart => "dragstart_handler(event)"}
               %div.text
                 %span.big 
                   = article['title']
                 %span.small
                   = article['description']
-              %a{:href=>"#"}
+              %a{:href=>"/#{uid}/article/#{i}"}
                 Read Article 

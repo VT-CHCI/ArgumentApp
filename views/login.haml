@@ -1,0 +1,12 @@
+!!!
+%html
+  %head
+    = partial :head
+  %body#login
+    %h1 Login
+    %form{:action => "/login", :method => "POST"}
+      %label{:for => "name"} Name:
+      %input#name{:name => "name"}
+      %label{:for => "number"} Number:
+      %input#number{:name => "number"}
+      %input{:type => "submit", :value => "login"}

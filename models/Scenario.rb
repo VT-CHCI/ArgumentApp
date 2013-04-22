@@ -4,7 +4,7 @@ class Scenario
   property :id, Serial
 
   property :uid, String
-  property :title, String
+  property :title, Text
   property :description, Text
 
   property :side_a, Text

@@ -1,15 +1,15 @@
-PDFJS.workerSrc = '../script/lib/pdf.js/build/pdf.js';
+PDFJS.workerSrc = '/script/lib/pdf.js/build/pdf.js';
 function pdf_mode() {
   PDFJS.getDocument('/scenarios/pdfs/helloworld.pdf').then(function(pdf) {
     // Using promise to fetch the page
-    pdf.getPage(1).then(function(page) {
-      var scale = 1.5;
+    pdf.getPage(2).then(function(page) {
+      var scale = 2;
       var viewport = page.getViewport(scale);
 
       //
       // Prepare canvas using PDF page dimensions
       //
-      var canvas = document.getElementById('the-canvas');
+      var canvas = document.getElementById('pdf-canvas');
       var context = canvas.getContext('2d');
       canvas.height = viewport.height;
       canvas.width = viewport.width;
@@ -25,3 +25,8 @@ function pdf_mode() {
     });
   });
 }
+
+
+Zepto(function($) {
+  pdf_mode();
+});

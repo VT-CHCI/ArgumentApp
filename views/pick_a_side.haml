@@ -11,13 +11,13 @@
     %hr
 
     .inline
-      %a#left{ :href => "/categorize" }
-        = side_a['description']
+      %a#left{ :href => "/#{uid}/categorize" }
+        = side_a
         %br
         %span.button Pick This Side
       .vr
-      %a#right{ :href => "/categorize" }
-        = side_b['description']
+      %a#right{ :href => "/#{uid}/categorize" }
+        = side_b
         %br
         %span.button Pick This Side
 

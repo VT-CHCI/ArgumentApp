@@ -1,7 +1,10 @@
 #!/usr/bin/env ruby
+require 'json'
+require 'haml'
+
 require 'sinatra'
 require 'sinatra/partial'
-require 'json'
+
 require 'data_mapper'
 require 'dm-serializer'
 require 'digest'
@@ -11,17 +14,13 @@ set :views => "#{settings.root}/views",
   :static => true,
   :sessions => true
 
-Dir["./helpers/*.rb"].each { |helper| require helper }
 
 DataMapper::Logger.new($stdout, :debug)
 DataMapper.setup(:default, "sqlite://#{Dir.pwd}/argue.db")
 DataMapper::Model.raise_on_save_failure = true
 Dir["./models/*.rb"].each {|model| require model }
-DataMapper.auto_migrate!
+DataMapper.auto_upgrade!
 
-require './routes/pick-a-side.rb'
-require './routes/categorize.rb'
-require './routes/pdf_view.rb'
-
-
+Dir["./routes/helpers/*.rb"].each { |helper| require helper }
+require './routes/app.rb'
 require './routes/rest.rb'
