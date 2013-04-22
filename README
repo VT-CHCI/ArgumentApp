@@ -4,6 +4,7 @@ A work in progress. A bit disjointed at the moment.
 
 Setup
 -----
+`git submodule init`
 `gem install json haml sinatra data_mapper sqlite dm-serializer`
 `ruby init.rb`
 
