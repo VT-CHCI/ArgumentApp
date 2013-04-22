@@ -5,7 +5,11 @@ A work in progress. A bit disjointed at the moment.
 Setup
 -----
 `git submodule init`
+
+`git submodule update`
+
 `gem install json haml sinatra data_mapper sqlite dm-serializer`
+
 `ruby init.rb`
 
 Importing Scenarios and Users
