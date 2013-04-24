@@ -13,6 +13,4 @@ app.controller('categorize', function($scope, $http) {
 
 
 Zepto(function($) {
-  console.log(app);
-
 });
