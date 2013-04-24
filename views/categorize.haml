@@ -1,12 +1,12 @@
 !!!
-%html
+%html{'ng-app' => "argue"}
   %head
     = partial :head
     %script{ :src => "/script/lib/zepto.min.js", :type => "text/javascript" }
     %script{ :src => "/script/lib/pdf.js/build/pdf.js", :type => "text/javascript" }
     %script{ :src => "/script/drag-drop.js", :type => "text/javascript" }
     %script{ :src => "/script/pdf-mode.js", :type => "text/javascript" }
-  %body#categorize
+  %body#categorize{'ng-controller' => 'categorize'}
     %h1 Categorize the Articles
     %hr
     #sort
@@ -14,31 +14,21 @@
         .category
           .counter 1
           %h2 For My Side
-          %span.description 
-            = side_a
+          %span.description {{ item.side_a }}
           %div.sortable-set{:ondragover => "dragover_handler(event)", :ondrop => "drop_handler(event)"}
-            - articles.each do |article|
-              %img{:src => "style/images/article.png"}
         %hr
         .category
-          .counter 
+          .counter 2
           %h2 Against My Side
-          %span.description 
-            = side_b
-            %div.sortable-set{:ondragover => "dragover_handler(event)", :ondrop => "drop_handler(event)"}
-              - articles.each do |article|
-                %img{:src => "style/images/article.png"}
+          %span.description {{ item.side_b }}
+          %div.sortable-set{:ondragover => "dragover_handler(event)", :ondrop => "drop_handler(event)"}
 
       #content
         %h2 Uncategorized
         %p Please classify each article as either supporting your side or opposing your side.
         %div.sortable-set{:ondragover => "dragover_handler(event)", :ondrop => "drop_handler(event)"}
-          - articles.each_with_index do |article, i|
-            %div.sortable{:draggable => "true", :ondragstart => "dragstart_handler(event)"}
-              %div.text
-                %span.big 
-                  = article['title']
-                %span.small
-                  = article['description']
-              %a{:href=>"/#{uid}/article/#{i}"}
-                Read Article 
+          %div.sortable{'ng-repeat' => 'article in item.articles', :draggable => "true", :ondragstart => "dragstart_handler(event)"}
+            %div.text
+              %span.big   {{ article.title }}
+              %span.small {{ article.small }}
+            %a{:href=>"article/{{ $index }} + 1"} Read Article 

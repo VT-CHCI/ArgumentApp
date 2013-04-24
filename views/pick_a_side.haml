@@ -1,23 +1,22 @@
 !!!
-%html
+%html{'ng-app' => "argue"}
   %head
     = partial :head
-  %body#pick-a-side
+  %body#pick-a-side{'ng-controller' => 'pick_a_side'}
     %h1 Pick A Side
-    %hr
-    %p
-      = description
 
+    %hr
+    %p {{item.description}}
     %hr
 
     .inline
-      %a#left{ :href => "/#{uid}/categorize" }
-        = side_a
+      %a#left{ :href => "categorize" }
+        {{item.side_a}}
         %br
         %span.button Pick This Side
       .vr
-      %a#right{ :href => "/#{uid}/categorize" }
-        = side_b
+      %a#right{ :href => "categorize" }
+        {{item.side_b}}
         %br
         %span.button Pick This Side
 
