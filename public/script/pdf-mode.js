@@ -1,4 +1,4 @@
-PDFJS.workerSrc = '/script/lib/pdf2.js';
+PDFJS.workerSrc = '/script/lib/pdf.js';
 function pdf_mode() {
   PDFJS.getDocument('/scenarios/pdfs/helloworld.pdf').then(function(pdf) {
     // Using promise to fetch the page
