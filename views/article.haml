@@ -10,7 +10,7 @@
     %hr
     .scroll
       %canvas#pdf-canvas
-    %button#previous Previous
-    %button#next Next
+    %button#previous{'onclick' => 'pdf.previous_page()'} Previous
+    %button#next{'onclick' => 'pdf.next_page()'} Next
     %button#zoom-out Zoom Out
     %button#zoom-in Zoom In
