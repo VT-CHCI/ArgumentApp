@@ -21,6 +21,8 @@ DataMapper::Model.raise_on_save_failure = true
 Dir["./models/*.rb"].each {|model| require model }
 DataMapper.auto_upgrade!
 
-Dir["./routes/helpers/*.rb"].each { |helper| require helper }
-require './routes/app.rb'
-require './routes/rest.rb'
+Dir["./common/*.rb"].each { |helper| require helper }
+
+require './routes/static.rb'
+require './routes/scenario.rb'
+
