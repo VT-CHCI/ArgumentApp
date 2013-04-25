@@ -1,6 +1,7 @@
 PDFJS.workerSrc = '/script/lib/pdf.js';
 function pdf_mode() {
   var pdf_scope,
+  viewport,
   canvas = document.getElementById('pdf-canvas'),
   context = canvas.getContext('2d'),
   scale = 2,
@@ -9,7 +10,7 @@ function pdf_mode() {
   function renderPage(num) {
     page_number = num;
     pdf_scope.getPage(num).then(function(page) {
-      var viewport = page.getViewport(scale);
+      viewport = page.getViewport(scale);
       canvas.height = viewport.height;
       canvas.width = viewport.width;
 
@@ -18,6 +19,12 @@ function pdf_mode() {
         viewport: viewport
       });
     });
+  }
+
+  function zoom(delta) {
+    scale = page_number * delta;
+    console.log(scale);
+    renderPage(page_number);
   }
 
   function set_page_delta(delta) {
@@ -34,9 +41,12 @@ function pdf_mode() {
   });
 
   return {
+    viewport : viewport,
     render_page   : renderPage,
     next_page     : function() { set_page_delta(1); },
-    previous_page : function() { set_page_delta(-1); }
+    previous_page : function() { set_page_delta(-1); },
+    zoom_in       : function() { zoom(1.2); },
+    zoom_out      : function() { zoom(-1.2); }
   }
 }
 
