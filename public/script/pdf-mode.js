@@ -1,32 +1,47 @@
 PDFJS.workerSrc = '/script/lib/pdf.js';
 function pdf_mode() {
-  PDFJS.getDocument('/scenarios/pdfs/helloworld.pdf').then(function(pdf) {
-    // Using promise to fetch the page
-    pdf.getPage(2).then(function(page) {
-      var scale = 2;
-      var viewport = page.getViewport(scale);
+  var pdf_scope,
+  canvas = document.getElementById('pdf-canvas'),
+  context = canvas.getContext('2d'),
+  scale = 0.8,
+  page_number = 1;
 
-      //
-      // Prepare canvas using PDF page dimensions
-      //
-      var canvas = document.getElementById('pdf-canvas');
-      var context = canvas.getContext('2d');
+  function renderPage(num) {
+    page_number = num;
+    pdf_scope.getPage(num).then(function(page) {
+      var viewport = page.getViewport(scale);
       canvas.height = viewport.height;
       canvas.width = viewport.width;
 
-      //
-      // Render PDF page into canvas context
-      //
-      var renderContext = {
+      page.render({
         canvasContext: context,
         viewport: viewport
-      };
-      page.render(renderContext);
+      });
     });
+  }
+
+  function set_page_delta(delta) {
+    if (page_number + delta < 1) { return; }
+    if (page_number + delta > pdf_scope.numPages) { return; }
+
+    renderPage(page_number + delta);
+  }
+
+  // Initializiation
+  PDFJS.getDocument('/scenarios/pdfs/helloworld.pdf').then(function(pdf) {
+    pdf_scope = pdf;
+    renderPage(page_number);
   });
+
+  return {
+    render_page   : renderPage,
+    next_page     : function() { set_page_delta(1); },
+    previous_page : function() { set_page_delta(-1); }
+  }
 }
 
 
 Zepto(function($) {
-  pdf_mode();
+  pdf = new pdf_mode();
+
 });
