@@ -3,7 +3,7 @@ function pdf_mode() {
   var pdf_scope,
   canvas = document.getElementById('pdf-canvas'),
   context = canvas.getContext('2d'),
-  scale = 0.8,
+  scale = 2,
   page_number = 1;
 
   function renderPage(num) {
