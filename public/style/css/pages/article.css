@@ -1,6 +1,9 @@
-#pdf-canvas {
-  width: 100%;
-  border: 1px solid #cfcfcf;
+.scroll {
   height: 400px;
+  overflow: scroll;
+  border: 1px solid #cfcfcf;
 }
 
+#pdf-canvas {
+  width: 100%;
+}
