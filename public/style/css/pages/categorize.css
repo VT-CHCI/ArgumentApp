@@ -62,17 +62,15 @@
 }
 
 .sortable {
-  border: 1px solid #cfcfcf;
-  border-top: none;
-
-  font-size: 12px;
-  padding: 5px;
-  line-height: 1em;
-  vertical-align: center;
+  display: block;
   background: url('../../images/article.png');
   background-position: 15px center;
   background-repeat: no-repeat;
+
+  border: 1px solid #cfcfcf;
+  padding: 5px;
   padding-left: 45px;
+  border-bottom: none;
 
   clear: both;
   overflow: hidden;
@@ -84,19 +82,8 @@
   padding-left: 10px;
 }
 
-.sortable a {
-  float: right;
-  display: inline-block;
-  border: 1px solid #cfcfcf;
-  padding: 5px;
-  font-size: 14px;
-  text-decoration: none;
-  color: black;
-  margin-top: 4px;
-}
-
-sortable a:hover {
-  background: grey;
+.sortable:hover {
+  background-color: grey;
 }
 
 .counter {
