@@ -1,11 +1,11 @@
 !!!
-%html
+%html{'ng-app' => 'argue'}
   %head
     = partial :head
     %script{ :src => "/script/lib/zepto.min.js", :type => "text/javascript" }
     %script{ :src => "/script/lib/pdf.js", :type => "text/javascript" }
     %script{ :src => "/script/pdf-mode.js", :type => "text/javascript" }
-  %body
+  %body{'ng-controller' => 'article'}
     %h1 Classify This Article
     %hr
     #pdf
