@@ -14,6 +14,16 @@ app.controller('categorize', function($scope, $http) {
 });
 
 
+app.controller('article', function($scope, $http) {
+  scenarioId = window.location.href.split('/')[3]
+  $http.get('/scenario/' + scenarioId).success(function(data) {
+    $scope.item = data;
+  });
+});
+
+
+
+
 Zepto(function($) {
     /* categorize and then industrialists */ 
 });

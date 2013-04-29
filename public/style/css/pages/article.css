@@ -18,6 +18,7 @@ button {
   background-position: 5px center;
   padding: 5px;
   padding-left: 30px;
+  border: 1px solid none;
 }
 
 button:hover {
@@ -36,5 +37,5 @@ button:hover {
   color: #cfcfcf;
   clear: both;
   overflow: hidden;
+  padding: 3px;
 }
-
