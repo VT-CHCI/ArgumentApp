@@ -13,13 +13,19 @@ button {
   border: none;
   pointer: cursor;
   color: #888888;
-  background-image: url('../../images/article.png');
   background-repeat: no-repeat;
   background-position: 5px center;
   padding: 5px;
   padding-left: 30px;
   border: 1px solid none;
 }
+
+#previous { background-image: url('../../images/previous.png'); }
+#next { background-image: url('../../images/next.png'); }
+#zoom-in { background-image: url('../../images/zoom_in.png'); }
+#zoom-out { background-image: url('../../images/zoom_out.png'); }
+
+
 
 button:hover {
   border: 1px solid #cfcfcf;
