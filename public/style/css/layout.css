@@ -30,3 +30,56 @@ hr {
   padding: 10px 0;
 }
 .inline a { display: table-cell; }
+#pick-a-side {
+
+}
+
+#pick-a-side p {
+  padding: 15px 40px;
+  line-height: 1.5em;
+  font-size: 20px;
+}
+
+#pick-a-side p:first-letter {
+  font-size: 2em;
+
+}
+
+.button-split a {
+  padding: 10px 30px;
+  color: black;
+  text-decoration: none;
+  line-height: 1.5em;
+  font-size: 18px;
+}
+
+.button-split a#right { text-align: left; }
+.button-split a#left { text-align: right; }
+
+.button-split a:hover { }
+
+.button-split a:hover .button { background: #eaeaea; }
+
+.button {
+  display: inline-block;
+  padding: 7px;
+  width: 110px;
+  border: 1px solid #cfcfcf;
+  margin-top: 20px;
+}
+
+
+a#big-left  { text-align: right; } 
+a#big-right { text-align; left;  }
+
+.inline a:hover .button {
+  background: #eaeaea;
+}
+
+#pick-a-side a:hover {
+}
+
+#pick-a-side a:hover .button {
+  background: #eaeaea;
+
+}

@@ -22,7 +22,7 @@
 
     %h3 Which side does this article better support?
 
-    .inline
+    .inline.button-split
       %a#left{ :href => "categorize" }
         {{item.side_a}}
         %br
@@ -31,3 +31,4 @@
       %a#right{ :href => "categorize" }
         {{item.side_b}}
         %br
+        %span.button Pick This Side
