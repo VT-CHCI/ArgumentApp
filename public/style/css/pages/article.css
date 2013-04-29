@@ -7,3 +7,34 @@
 #pdf-canvas {
   width: 100%;
 }
+
+button {
+  background: white;
+  border: none;
+  pointer: cursor;
+  color: #888888;
+  background-image: url('../../images/article.png');
+  background-repeat: no-repeat;
+  background-position: 5px center;
+  padding: 5px;
+  padding-left: 30px;
+}
+
+button:hover {
+  border: 1px solid #cfcfcf;
+
+}
+
+.right {
+  float: right;
+}
+
+#controls {
+  background: white;
+  border: 1px solid #cfcfcf;
+  border-bottom: none;
+  color: #cfcfcf;
+  clear: both;
+  overflow: hidden;
+}
+
