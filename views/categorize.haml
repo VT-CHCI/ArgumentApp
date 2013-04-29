@@ -15,27 +15,28 @@
           .counter 1
           %h2 For My Side
           %span.description {{ item.side_a }}
-          %div.sortable-set{:ondragover => "dragover_handler(event)", :ondrop => "drop_handler(event)"}
+
         %hr
         .category
           .counter 2
           %h2 Against My Side
           %span.description {{ item.side_b }}
-          %div.sortable-set{:ondragover => "dragover_handler(event)", :ondrop => "drop_handler(event)"}
 
       #content
         %h2 Uncategorized
         %p Please classify each article as either supporting your side or opposing your side.
-        %div.sortable-set{:ondragover => "dragover_handler(event)", :ondrop => "drop_handler(event)"}
-          %a.sortable{ 'ng-repeat' => 'article in item.articles', :href => "article/{{ $index }} + 1", :draggable => "true", :ondragstart => "dragstart_handler(event)" }
-            %div.text
-              %span.big   {{ article.title }}
-              %span.small {{ article.small }}
+        %div.articles
+          %a.article{ 'ng-repeat' => 'article in item.articles', :href => "article/{{ $index }} + 1"}
+            %span.big   {{ article.title }}
+            %span.small {{ article.description }}
+            %span.read Read Article
+
+
         %div.progress
-          %span.label
+          .label
             %span.current 1 
             of 
             %span.total 10
             Articles Classified
-          .filled
-          
+          .filled 
+    %hr
