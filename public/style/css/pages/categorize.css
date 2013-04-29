@@ -24,7 +24,7 @@
 }
 
 .category .description {
-  font-size: 14px;
+  font-size: 16px;
   line-height: 1.2em;
 }
 
@@ -48,32 +48,6 @@
   padding: 40px;
 }
 
-.sortable-set {
-  //border:1px solid #cfcfcf;
-  border-bottom: none;
-  border-top: 1px solid #cfcfcf;
-  margin-top: 10px;
-  margin-bottom: 10px;
-  
-}
-
-.sortable {
-  display: block;
-  background: url('../../images/article.png');
-  background-position: 15px center;
-  background-repeat: no-repeat;
-
-  border: 1px solid #cfcfcf;
-  padding: 5px;
-  padding-left: 45px;
-  border-bottom: none;
-
-  clear: both;
-  overflow: hidden;
-}
-.sortable:hover {
-  background-color: grey;
-}
 
 .counter {
   display: inline-block; 
@@ -132,7 +106,7 @@
   border-right: 1px solid #cfcfcf;
   border-bottom: 1px solid #cfcfcf;
   padding: 15px;
-  background: url('../images/article.png');
+  background-image: url('../../images/article.png');
   background-position: 15px center;
   background-repeat: no-repeat;
 }
@@ -161,7 +135,7 @@
 .article .read {
   float: right;
   border-left : 1px solid #cfcfcf;
-  padding-left: 10px;
+  padding-left: 20px;
   padding-right: 7px;
   color: #00165d
 }
@@ -186,12 +160,12 @@
 }
 
 .progress .filled {
-  background: #d4d4d4;
+  background: #e8e8e8;
   border-right: 1px solid #cfcfcf;
   display: block;
   height: 50px;
   margin-top: -50px;
-  width: 30%;
+  width: 10%;
   display: relative;
 }
 
