@@ -131,25 +131,37 @@
 
 
 .progress {
+  height: 20px;
+  width: 100%;
+  background: black;
+  color: black;
   border: 1px solid #cfcfcf;
-  padding: 15px;
+  color: white;
+  display: inline-block;
+  border: 1px solid #cfcfcf;
 }
 
-.progress .percentage {
-
+.progress::webkit-progress-bar-value {
+  -webkit-appearance: progress-bar;
+  background: red;
+  color: black;
 }
+
+.progress .filled {
+  background: white;
+  display: inline-block;
+  height: 30px;
+  width: 30%;
+  display: relative;
+}
+
 .progress .current, .progress .total {
   font-weight: bold;
 }
-
-
-.lightbox {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: url('../images/semi-trans.png') repeat;
-  background: black;
+.label {
   text-align: center;
+  margin: 0 auto;
+  color: black;
+  position: absolute;
 }
+
