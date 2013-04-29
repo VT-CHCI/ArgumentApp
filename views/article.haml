@@ -8,9 +8,26 @@
   %body
     %h1 Classify This Article
     %hr
-    .scroll
-      %canvas#pdf-canvas
-    %button#previous{'onclick' => 'pdf.previous_page()'} Previous
-    %button#next{'onclick' => 'pdf.next_page()'} Next
-    %button#zoom-out Zoom Out
-    %button#zoom-in Zoom In
+    #pdf
+      #controls
+        %button#previous{'onclick' => 'pdf.previous_page()'} Previous
+        |
+        %button#next{'onclick' => 'pdf.next_page()'} Next
+        .right
+          %button#zoom-in Zoom In
+          |
+          %button#zoom-out Zoom Out
+      .scroll
+        %canvas#pdf-canvas
+
+    %h3 Which side does this article better support?
+
+    .inline
+      %a#left{ :href => "categorize" }
+        {{item.side_a}}
+        %br
+        %span.button Pick This Side
+      .vr
+      %a#right{ :href => "categorize" }
+        {{item.side_b}}
+        %br
