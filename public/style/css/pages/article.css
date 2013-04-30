@@ -1,5 +1,5 @@
 .scroll {
-  height: 400px;
+  height: 600px;
   overflow: scroll;
   border: 1px solid #cfcfcf;
 }
@@ -17,7 +17,7 @@ button {
   background-position: 5px center;
   padding: 5px;
   padding-left: 30px;
-  border: 1px solid none;
+  border: 1px solid white;
 }
 
 #previous { background-image: url('../../images/previous.png'); }
