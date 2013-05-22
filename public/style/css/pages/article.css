@@ -1,5 +1,5 @@
 .scroll {
-  height: 600px;
+  height: 600px;;
   overflow: scroll;
   border: 1px solid #cfcfcf;
 }
@@ -44,4 +44,15 @@ button:hover {
   clear: both;
   overflow: hidden;
   padding: 3px;
+}
+
+.side-button { }
+.side-button.faded { opacity: 0.4; }
+.justification { display: none; }
+.justification.visible { display: block; }
+.justification span { }
+.justification textarea { 
+  display: block; 
+  border: 1px solid #cfcfcf;
+  width: 100%;
 }

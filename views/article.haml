@@ -23,13 +23,18 @@
     %h3 Which side does this article better support?
 
     .inline.button-split
-      %a#left{ :href => "categorize" }
+      %a.side-button#left{ :href => "categorize" }
         {{item.side_a}}
         %br
         %span.button Pick This Side
       .vr
-      %a#right{ :href => "categorize" }
+      %a.side-button#right{ :href => "categorize" }
         {{item.side_b}}
         %br
         %span.button Pick This Side
     %hr
+    %div.justification
+      %h3 Briefly explain why this article supports this side:
+      %textarea
+      %a.button Submit
+      %hr

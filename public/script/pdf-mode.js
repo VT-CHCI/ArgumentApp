@@ -53,5 +53,15 @@ function pdf_mode() {
 
 Zepto(function($) {
   pdf = new pdf_mode();
-
+  $(".side-button").on("click", function(e) {
+    e.preventDefault();
+    console.log(this.id == "left");
+    if (this.id == "left") {
+      $("#right").addClass("faded");
+    } else {
+      $("#left").addClass("faded");
+    }
+    $(".justification").addClass("visible");
+  });
+  
 });

@@ -21,9 +21,6 @@ app.controller('article', function($scope, $http) {
   });
 });
 
-
-
-
 Zepto(function($) {
     /* categorize and then industrialists */ 
 });
