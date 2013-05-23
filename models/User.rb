@@ -6,5 +6,5 @@ class User
   property :cookie, Text
   property :number, Integer
 
-  has n, :sessions
+  has n, :scenarios
 end
