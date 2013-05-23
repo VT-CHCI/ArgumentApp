@@ -55,4 +55,23 @@ button:hover {
   display: block; 
   border: 1px solid #cfcfcf;
   width: 100%;
+  height: 100px;
+  padding: 10px;
+  color: #333333;
+  font-size: 13px;
+}
+.justification .button {
+  float: right;
+  clear: both;
+  margin-bottom: 40px;
+  display: none;
+}
+.justification .submit {
+  border: 1px solid #cfcfcf;
+  font-size: 18px;
+  padding: 7px;
+  display: block;
+  width: 100px;
+  float: right;
+  text-align: center;
 }
