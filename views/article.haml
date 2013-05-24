@@ -6,6 +6,7 @@
     %script{ :src => "/script/lib/pdf.js", :type => "text/javascript" }
     %script{ :src => "/script/pdf-mode.js", :type => "text/javascript" }
   %body{'ng-controller' => 'article'}
+    = partial :user
     %h1 Classify This Article
     %hr
     #pdf
