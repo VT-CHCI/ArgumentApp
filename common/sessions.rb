@@ -9,10 +9,17 @@ def create_cookie(user)
 end
 
 def login_as(user)
+  # Registers cookie and adds reference to cookie in DB Model for given user
   cookie = create_cookie(user.name)
   session['argue-app'] = cookie
   user.cookie = cookie
   user.save
+end
+
+def logged_in_as
+  # Determines currently logged in user via the provided cookie
+  usersWithCookie = User.all(:cookie => session['argue-app'])
+  return usersWithCookie.size == 1 ? usersWithCookie.first.name : nil
 end
 
 def logout

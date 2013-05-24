@@ -3,16 +3,14 @@ get '/login' do
 end
 
 post '/login' do
-  u = User.all(:name => request.params['name'])
-  if (u == nil || u .size == 0) then
-    redirect('/login')
-  elsif u.first.number == request.params['numer'].to_i then
-    login_as(u.first)
+  usersWithName = User.all(:name => request.params['name'])
+  if (usersWithName.size == 1 && usersWithName.first.number == request.params['number'].to_i) then
+    login_as(usersWithName.first) # Stores Cookie
   else
-    redirect('/login')
+    redirect('/login') # Login Failed
   end
 end
 
 get '/logout' do
-
+  logout
 end
