@@ -18,13 +18,17 @@ end
 
 def logged_in_as
   # Determines currently logged in user via the provided cookie
-  usersWithCookie = User.all(:cookie => session['argue-app'])
-  return usersWithCookie.size == 1 ? usersWithCookie.first.name : nil
+  if !session['argue-app'].nil? then
+    usersWithCookie = User.all(:cookie => session['argue-app'])
+    return usersWithCookie.size == 1 ? usersWithCookie.first.name : nil
+  else
+    return nil
+  end
 end
 
 def logout
   sesh = session['argue-app']
-  if sesh.nil?
+  if (!sesh.nil?) then
     user = User.all(:cookie => sesh).first
     user.cookie = nil
     user.save
