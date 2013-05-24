@@ -6,5 +6,5 @@ class User
   property :cookie, Text
   property :number, Integer
 
-  has n, :scenarios
+  has n, :scenarios, :through => Resource
 end

@@ -5,11 +5,11 @@ put '/scenario/:uid' do
   scn = JSON request.body.read
 
   scenario = Scenario.create(
+    :uid          => params[:uid],
     :title        => scn['title'],
     :description  => scn['description'],
     :side_a       => scn['side_a'],
-    :side_b       => scn['side_b'],
-    :uid          => params[:uid]
+    :side_b       => scn['side_b']
   )
 
   scn['articles'].each do |article|

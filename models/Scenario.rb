@@ -1,6 +1,5 @@
 class Scenario
   include DataMapper::Resource
-
   property :id, Serial
 
   # Set by Initial PUT
@@ -12,9 +11,6 @@ class Scenario
 
   has n, :articles
 
-
-  # User Modifiable
   property :user_side, Integer
   property :user_justification, Text
-
 end
