@@ -1,21 +1,6 @@
-get '/login' do
-  haml :login
+get '/' do
+  "Listing of all scenarios if logged in"
 end
-
-post '/login' do
-  # Create Sinatra Session
-  u = User.all(:name => request.params['name'])
-
-  if (u == nil || u.size == 0) then
-    redirect('/login')
-  elsif u.first.number == request.params['number'].to_i then
-    login_as(u.first)
-    "logged in"
-  else
-    redirect('/login')
-  end
-end
-
 
 get '/:uid' do
   redirect "/#{params[:uid]}/pick_a_side"

@@ -24,6 +24,6 @@ DataMapper.auto_upgrade!
 Dir["./common/*.rb"].each { |helper| require helper }
 
 require './routes/static.rb'
+require './routes/auth.rb'
 require './routes/rest/scenario.rb'
 require './routes/rest/user.rb'
-
