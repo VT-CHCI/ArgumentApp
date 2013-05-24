@@ -15,6 +15,6 @@ class Scenario
 
   # User Modifiable
   property :user_side, Integer
-  property :user_justificaiton, Text
+  property :user_justification, Text
 
 end
