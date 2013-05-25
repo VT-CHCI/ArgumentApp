@@ -4,21 +4,22 @@
     = partial :head
   %body#pick-a-side{'ng-controller' => 'pick_a_side'}
     = partial :user
-    %h1 Pick A Side
+    %div#main
+      %h1 Pick A Side
 
-    %hr
-    %p {{item.description}}
-    %hr
+      %hr
+      %p {{item.description}}
+      %hr
 
-    .inline.button-split
-      %a#left{ :href => "categorize" }
-        {{item.side_a}}
-        %br
-        %span.button Pick This Side
-      .vr
-      %a#right{ :href => "categorize" }
-        {{item.side_b}}
-        %br
-        %span.button Pick This Side
+      .inline.button-split
+        %a#left{ :href => "categorize" }
+          {{item.side_a}}
+          %br
+          %span.button Pick This Side
+        .vr
+        %a#right{ :href => "categorize" }
+          {{item.side_b}}
+          %br
+          %span.button Pick This Side
 
-    %hr
+      %hr

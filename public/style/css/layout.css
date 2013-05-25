@@ -1,13 +1,16 @@
 body {
   background: url('../images/bg.png');
 
-  max-width: 960px;
-  margin: 0 auto;
   line-height: 1.25em;
   font-family: Bonveno;
   font-weight: normal;
-  padding: 10px;
   padding-top: 0;
+}
+
+#main {
+  margin: 0 auto;
+  max-width: 960px;
+  padding: 10px;
 }
 
 hr {
@@ -82,4 +85,16 @@ a#big-right { text-align; left;  }
 #pick-a-side a:hover .button {
   background: #eaeaea;
 
+}
+
+#user-bar {
+  border-bottom: 1px solid #cfcfcf;
+  clear: both;
+  overflow: hidden;
+  padding: 5px;
+  background: #f5f5f5;
+}
+
+#user-bar .right {
+  float: right;
 }

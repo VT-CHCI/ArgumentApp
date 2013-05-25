@@ -8,36 +8,37 @@
     %script{ :src => "/script/pdf-mode.js", :type => "text/javascript" }
   %body#categorize{'ng-controller' => 'categorize'}
     = partial :user
-    %h1 Categorize the Articles
-    %hr
-    #sort
-      #sidebar
-        .category
-          .counter 1
-          %h2 For My Side
-          %span.description {{ item.side_a }}
+    %div#main
+      %h1 Categorize the Articles
+      %hr
+      #sort
+        #sidebar
+          .category
+            .counter 1
+            %h2 For My Side
+            %span.description {{ item.side_a }}
 
-        %hr
-        .category
-          .counter 2
-          %h2 Against My Side
-          %span.description {{ item.side_b }}
+          %hr
+          .category
+            .counter 2
+            %h2 Against My Side
+            %span.description {{ item.side_b }}
 
-      #content
-        %h2 Uncategorized
-        %p Please classify each article as either supporting your side or opposing your side.
-        %div.articles
-          %a.article{ 'ng-repeat' => 'article in item.articles', :href => "article/{{ $index }} + 1"}
-            %span.big   {{ article.title }}
-            %span.small {{ article.description }}
-            %span.read Read Article
+        #content
+          %h2 Uncategorized
+          %p Please classify each article as either supporting your side or opposing your side.
+          %div.articles
+            %a.article{ 'ng-repeat' => 'article in item.articles', :href => "article/{{ $index }} + 1"}
+              %span.big   {{ article.title }}
+              %span.small {{ article.description }}
+              %span.read Read Article
 
 
-        %div.progress
-          .label
-            %span.current 1 
-            of 
-            %span.total 10
-            Articles Classified
-          .filled 
-    %hr
+          %div.progress
+            .label
+              %span.current 1 
+              of 
+              %span.total 10
+              Articles Classified
+            .filled 
+      %hr
