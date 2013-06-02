@@ -14,7 +14,7 @@ put '/scenario/:uid' do
 
   scn['articles'].each do |article|
      scenario.articles << Article.create(
-       :file        => article['file'],
+       :pdf_filename => article['pdf_filename'],
        :title       => article['title'],
        :description => article['description'],
        :side        => article['side']
