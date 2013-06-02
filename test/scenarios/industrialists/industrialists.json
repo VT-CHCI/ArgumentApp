@@ -5,26 +5,26 @@
   "side_b": "The industrialists that we've studied are captains of industry,\" and their contributions to American society far outweigh the negatives.",
   "articles": [
     {
-      "file" : "/some/path",
+      "pdf_filename" : "/some/path",
       "title": "Lorem Ipsum Dolor",
       "description": "Testing test one",
       "side" : 0
     },
     {
 
-      "file" : "/some/path",
+      "pdf_filename" : "/some/path",
       "title": "Sit Amet Alor",
       "description": "Testing Testing Two",
       "side" : 0
     },
     {
-      "file" : "/some/path",
+      "pdf_filename" : "/some/path",
       "title": "Side B Articule Uno",
       "description": "Testing testing test one two",
       "side" : 1
     },
     {
-      "file" : "/some/path",
+      "pdf_filename" : "/some/path",
       "title": "Side B Article Numero Dos",
       "description": "Testing testing woho two one two",
       "side" : 1
