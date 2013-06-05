@@ -28,7 +28,7 @@
           %h2 Uncategorized
           %p Please classify each article as either supporting your side or opposing your side.
           %div.articles
-            %a.article{ 'ng-repeat' => 'article in item.articles', :href => "article/{{ $index }} + 1"}
+            %a.article{ 'ng-repeat' => 'article in item.articles', :href => "article/{{ $index }}"}
               %span.big   {{ article.title }}
               %span.small {{ article.description }}
               %span.read Read Article

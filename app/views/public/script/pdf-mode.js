@@ -34,11 +34,12 @@ function pdf_mode() {
     renderPage(page_number + delta);
   }
 
-  // Initializiation
-  PDFJS.getDocument('/scenarios/pdfs/helloworld.pdf').then(function(pdf) {
-    pdf_scope = pdf;
-    renderPage(page_number);
-  });
+  function load_pdf(path) {
+    PDFJS.getDocument(path).then(function(pdf) {
+      pdf_scope = pdf;
+      renderPage(page_number);
+    });
+  }
 
   return {
     viewport : viewport,
@@ -46,22 +47,7 @@ function pdf_mode() {
     next_page     : function() { set_page_delta(1); },
     previous_page : function() { set_page_delta(-1); },
     zoom_in       : function() { zoom(1.2); },
-    zoom_out      : function() { zoom(-1.2); }
+    zoom_out      : function() { zoom(-1.2); },
+    load_pdf      : load_pdf
   }
 }
-
-
-Zepto(function($) {
-  pdf = new pdf_mode();
-  $(".side-button").on("click", function(e) {
-    e.preventDefault();
-    console.log(this.id == "left");
-    if (this.id == "left") {
-      $("#right").addClass("faded");
-    } else {
-      $("#left").addClass("faded");
-    }
-    $(".justification").addClass("visible");
-  });
-  
-});
