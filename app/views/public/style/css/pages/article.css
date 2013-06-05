@@ -74,4 +74,7 @@ button:hover {
   width: 100px;
   float: right;
   text-align: center;
+  color: #333333;
+  text-decoration: none;
+  margin-top: 10px;
 }
