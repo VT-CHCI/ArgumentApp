@@ -10,7 +10,5 @@ class Scenario
   property :side_b, Text
 
   has n, :articles
-
-  property :user_side, Integer
-  property :user_justification, Text
+  belongs_to :session, :required => false
 end
