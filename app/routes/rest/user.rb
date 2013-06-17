@@ -1,8 +1,4 @@
-post '/user/:number/' do
-
-end
-
-put '/user/:number' do
+put '/user' do
   user = JSON request.body.read
   new_user = User.create(
     :name   => user['name'],
@@ -11,8 +7,12 @@ put '/user/:number' do
   new_user.save
 end
 
-get '/user/:number' do
-  user = User.all(:number => params[:number].to_i)
+post '/user/:name/' do
+
+end
+
+get '/user/:name' do
+  user = User.all(:name => params[:name].to_i)
   if user.nil? then
     status 404
   else
@@ -21,6 +21,6 @@ get '/user/:number' do
   end
 end
 
-delete '/user/:number' do
+delete '/user/:name' do
 
 end
