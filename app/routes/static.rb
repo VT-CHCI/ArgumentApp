@@ -1,5 +1,5 @@
 get '/' do
-  "Listing of all scenarios if logged in"
+  haml :list
 end
 
 get '/:uid' do

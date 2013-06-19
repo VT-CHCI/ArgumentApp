@@ -5,9 +5,11 @@
   %body#login
     %div#main
       %h1 Login
+      %hr
       %form{:action => "/login", :method => "POST"}
         %label{:for => "name"} Name:
         %input#name{:name => "name"}
         %label{:for => "number"} Number:
         %input#number{:name => "number"}
         %input{:type => "submit", :value => "login"}
+      %hr
